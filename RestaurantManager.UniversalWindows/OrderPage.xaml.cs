@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using RestaurantManager.Models;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -30,6 +31,15 @@ namespace RestaurantManager.UniversalWindows
         private void HomeAppBarButton_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(MainPage));
+        }
+
+        private void AddToOrderButton_Click(object sender, RoutedEventArgs e)
+        {
+            //foreach (string item in MenuItemsList.SelectedItems)
+            //{
+            //    if (Application.Current.Resources["DataManager"] is DataManager)
+            //        ((DataManager) Application.Current.Resources["DataManager"]).CurrentlySelectedMenuItems.Add(item);
+            //}
         }
     }
 }

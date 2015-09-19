@@ -2,9 +2,10 @@
     x:Class="RestaurantManager.UniversalWindows.OrderPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:RestaurantManager.UniversalWindows"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="using:RestaurantManager.UniversalWindows"
+    xmlns:data="using:RestaurantManager.Models"
     mc:Ignorable="d">
     
     <Page.TopAppBar>
@@ -38,15 +39,15 @@
         <ListView Grid.Row="1"
                   Grid.Column="0"
                   Grid.RowSpan="2"
+                  x:Name="MenuItemsList"
                   Margin="10,0"
-                  Background="Green">
-            
+                  ItemsSource="{Binding Path=MenuItems, Source={StaticResource DataManager}}">
         </ListView>
 
         <ListView Grid.Row="2"
                   Grid.Column="2"
-                  Background="Blue">
-
+                  x:Name="CurrentMenuItemsList"
+                  ItemsSource="{Binding Path=CurrentlySelectedMenuItems, Source={StaticResource DataManager}, Mode=TwoWay}">
         </ListView>
 
         <Button Grid.Row="4" 
@@ -55,7 +56,7 @@
                 x:Name="AddToOrderButton"
                 HorizontalAlignment="Center" 
                 VerticalAlignment="Center" 
-                Content="Add to Order" />
+                Content="Add to Order" Click="AddToOrderButton_Click" />
         
         <Button Grid.Row="4" 
                 Grid.Column="1" 

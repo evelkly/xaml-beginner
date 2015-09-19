@@ -28,15 +28,15 @@
                    Grid.ColumnSpan="2" 
                    HorizontalAlignment="Center" 
                    VerticalAlignment="Bottom" 
-                   FontSize="22"
+                   FontSize="18"
                    Text="Internal Test Version" />
-        <Button Grid.Row="3" 
+        <Button Grid.Row="2" 
                 Grid.Column="0" 
                 x:Name="GoToOrdersViewButton"
                 HorizontalAlignment="Center" 
                 VerticalAlignment="Center" 
                 Content="Go to Orders View" Click="GoToOrdersViewButton_Click" />
-        <Button Grid.Row="3" 
+        <Button Grid.Row="2" 
                 Grid.Column="1" 
                 x:Name="SubmitOrderButton"
                 HorizontalAlignment="Center" 
